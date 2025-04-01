@@ -16,7 +16,7 @@
 
 from __future__ import print_function
 import html
-import cgi
+#import cgi
 import time
 import sys
 import json
