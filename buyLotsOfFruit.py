@@ -31,11 +31,13 @@ fruitPrices = {'apples': 2.00, 'oranges': 1.50, 'pears': 1.75,
 def buyLotsOfFruit(orderList):
     """
         orderList: List of (fruit, numPounds) tuples
-
     Returns cost of order
-    """
+    """ 
     totalCost = 0.0
-    "*** YOUR CODE HERE ***"
+
+    for fruit, pound in orderList:
+        totalCost += (fruitPrices.get(fruit) * pound)
+        
     return totalCost
 
 

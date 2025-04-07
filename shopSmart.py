@@ -30,8 +30,18 @@ def shopSmart(orderList, fruitShops):
         fruitShops: List of FruitShops
     """
     "*** YOUR CODE HERE ***"
-    return None
+    minTotal = float('inf')
+    result = None
+    
+    for fruitShop in fruitShops:
+        canidate = fruitShop.getPriceOfOrder(orderList)
+        if(canidate < minTotal):
+            minTotal = canidate
+            result = fruitShop
 
+
+    return result 
+    
 
 if __name__ == '__main__':
     "This code runs when you invoke the script from the command line"
